@@ -27,7 +27,7 @@ CUDA 11.1
 nvidia drivers v.460.56
 
 
-# IRTUAL ENVIRONMENT SETUP
+# VIRTUAL ENVIRONMENT SETUP
 1) make setup
 2) bash install_additional_packages.sh
 
@@ -45,14 +45,18 @@ a) expect this to run for 25 hours on 2x3090 system
 b) trains all models from scratch
 c) follow commands below to produce entire solution from scratch
 
+```
 bash reproduce.sh
+```
 
 retrain models fast (this uses 4x downsampled tiled images and produces lb 0.9178/0.9467):
 a) expect this to run for 2 hours on 2x3090 system
 b) trains 5-fold resnext50 models from scratch for 50 epochs
 c) follow commands below to produce fast solution from scratch
 
+```
 bash reproduce_fast.sh
+```
 
 possible issues:
 1) if you run into GPU memory issue, reduce --batch_size option in the sh script.
