@@ -33,7 +33,9 @@ nvidia drivers v.460.56
 
 # DATA SETUP (assumes the [Kaggle API](https://github.com/Kaggle/kaggle-api) is installed)
 below are the shell commands used in each step, as run from the top level directory
+```
 bash download_data.sh
+```
 
 # DATA PROCESSING
 #The train/predict code will also call this script if it has not already been run on the relevant data.
