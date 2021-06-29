@@ -4,7 +4,7 @@ Below you can find a outline of how to reproduce our solution for the Hubmap-Hac
 This package will let you create a virtual environment to reproduce our solution.
 If you run into any trouble with the setup/code or have any questions please contact me at ukrakim@gmail.com
 
-#ARCHIVE CONTENTS
+# ARCHIVE CONTENTS
 Hubmap-Hacking the Kidney, 3rd Place Solution.pdf : write up of methods
 Makefile: makefile to set up virtual environment
 requirements.txt: requirements
@@ -17,29 +17,29 @@ train_code_fast: code to rebuild fast models from scratch
 trained_models: code/trained models with logs
 trained_models_fast: code/trained version of fast models
 
-#HARDWARE: (The following specs were used to create the original solution)
+# HARDWARE: (The following specs were used to create the original solution)
 Ubuntu 18.04 LTS (512 GB boot disk)
 2xRTX 3090 (24 Gb VRam each)
 
-#SOFTWARE (python packages are detailed separately in `requirements.txt`):
+# SOFTWARE (python packages are detailed separately in `requirements.txt`):
 Python 3.7.9
 CUDA 11.1
 nvidia drivers v.460.56
 
 
-#VIRTUAL ENVIRONMENT SETUP
+# IRTUAL ENVIRONMENT SETUP
 1) make setup
 2) bash install_additional_packages.sh
 
-#DATA SETUP (assumes the [Kaggle API](https://github.com/Kaggle/kaggle-api) is installed)
-# below are the shell commands used in each step, as run from the top level directory
+# DATA SETUP (assumes the [Kaggle API](https://github.com/Kaggle/kaggle-api) is installed)
+below are the shell commands used in each step, as run from the top level directory
 bash download_data.sh
 
-#DATA PROCESSING
-# The train/predict code will also call this script if it has not already been run on the relevant data.
+# DATA PROCESSING
+#The train/predict code will also call this script if it has not already been run on the relevant data.
 preprocessing was done on Kaggle in this notebook: https://www.kaggle.com/shujun717/1024-reduce-4-images?scriptVersionId=59850599. download_data.sh automatically downloads the preprocessed dataset
 
-#MODEL BUILD: There are three options to produce the solution.
+# MODEL BUILD: There are three options to produce the solution.
 retrain models:
 a) expect this to run for 25 hours on 2x3090 system
 b) trains all models from scratch
@@ -59,7 +59,7 @@ possible issues:
 I suggest you try halving it.
 2) --workers should be smaller than the number of cpu cores your cpu have
 
-#INFERENCE
+# INFERENCE
 full solution:
 1) create new Kaggle dataset of trained weights from train_code/resnext50/models and train_code/resnext101/models
 2) Copy and edit this notebook: https://www.kaggle.com/shujun717/hubmap-3rd-place-inference?scriptVersionId=62198789
